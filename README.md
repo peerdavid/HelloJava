@@ -12,7 +12,7 @@ This is a simple hello world (java) project with continuous integration workflow
 Build the hello world java code, which will be included and executed in the docker container. <br />
 
 ## CircleCi - Hosted Continuous Integration and Deployment (circle.yml)
-1) Build java source code (./gradlew build)<br />
+1) Build java source code with <i> ./gradlew build </i> <br />
 2) Run all unit tests <br />
 3) Create a new version of the docker image, if all tests succeeded 'peerdavid/hellojava'<br />
 4) Push image to dockerhub<br />
