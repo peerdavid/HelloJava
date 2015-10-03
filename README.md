@@ -8,11 +8,11 @@ This is a simple hello world (java) project with continuous integration workflow
 3) If everything succeeds (java build, junit tests, etc.), CircleCi builds a new docker image<br />
 4) Rollout image via DockerHub<br />
 
-## Gradle
+## Gradle <i>(build.gradle)</i>
 1) Run all JUnit tests <br />
 2) Build the hello world java code, which will be included and executed. <br />
 
-## CircleCi - Hosted Continuous Integration and Deployment (circle.yml)
+## CircleCi <i>(circle.yml)</i>
 1) Build java source code with <i> ./gradlew build </i> <br />
 2) Run all unit tests <br />
 3) Create a new version of the docker image, if all tests succeeded 'peerdavid/hellojava'<br />
@@ -20,7 +20,7 @@ This is a simple hello world (java) project with continuous integration workflow
 <br />
 <b> If you want to create your own ci build, you have to set the environment variables EMAIL, USER and PASSWORD to connect CircleCi with DockerHub </b>
   
-## DockerImage (Dockerfile)
+## DockerImage <i>(Dockerfile)</i>
 1) Use java 8 base image<br />
 2) Copy java class files into the docker container
 3) Execute it
