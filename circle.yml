@@ -2,17 +2,7 @@ machine:
   services:
     - docker
 
-
-test:
-  override:
-    # Run unit tests
-    - ./gradlew test
-
-
 dependencies:
-  pre:
-    - ./gradlew build
-
   override:
     - docker info
     - docker build -t peerdavid/hellojava .
