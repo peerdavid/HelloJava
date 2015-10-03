@@ -13,7 +13,7 @@ public class Main {
     */
    public static void main(String[] args){
       Math math = new Math();
-      int x = math.add(3, 4);
+      int x = math.add(7, 4);
 
       System.out.println("Hello World = " + x);
    }
