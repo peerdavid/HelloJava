@@ -21,7 +21,7 @@ public class MathTest {
    @Test
    public void add_Add3And4_ShouldReturn7(){
       int a = 3;
-      int b = 4;
+      int b = 48
 
       int expected = 7;
       int actual = _testee.add(a, b);
