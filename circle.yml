@@ -3,10 +3,16 @@ machine:
     - docker
 
 dependencies:
+  pre:
+    - gradle wrapper
+    - gradle build
   override:
     - docker info
     - docker build -t peerdavid/hellojava .
 
-test:
-  pre:
-    - gradle wrapper
+deployment:
+  docker:
+    branch:
+      master
+    commands:
+      docker push peerdavid/hellojava

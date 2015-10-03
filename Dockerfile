@@ -14,11 +14,10 @@ FROM java:8
 WORKDIR /data
 
 # Copy my hello world java file(s) into /data/
-#COPY build/classes/main /data/
+COPY build/classes/main /data/
 
 # Define commonly used JAVA_HOME variable
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Execute my java hello world prog
-#CMD java tirol.peer.david.hellojava.Main
-CMD LS
+CMD java tirol.peer.david.hellojava.Main
