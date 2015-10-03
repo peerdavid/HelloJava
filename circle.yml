@@ -6,3 +6,7 @@ dependencies:
   override:
     - docker info
     - docker build -t peerdavid/hellojava .
+
+test:
+  pre:
+    - gradle wrapper
