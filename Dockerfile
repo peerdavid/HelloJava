@@ -20,4 +20,4 @@ COPY out/production/HelloJava /data/
 ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 # Execute my java hello world prog
-CMD java tirol.peer.david.Main
+CMD java tirol.peer.david.tirol.peer.david.hellojava.Main
