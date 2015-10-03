@@ -3,16 +3,20 @@ machine:
     - docker
 
 dependencies:
+  cache_directories:
+    - "~/docker"
   pre:
     - gradle wrapper
     - gradle build
   override:
     - docker info
+    - if [[ -e ~/docker/image.tar ]]; then docker load --input ~/docker/image.tar; fi
     - docker build -t peerdavid/hellojava .
+    - mkdir -p ~/docker; docker save peerdavid/hellojava > ~/docker/image.tar
 
 deployment:
   docker:
-    branch:
-      master
+    branch: master
     commands:
-      docker push peerdavid/hellojava
+      - docker login -e $DOCKER_EMAIL -u $DOCKER_USER -p $DOCKER_PASS
+      - docker push peerdavid/hellojava
