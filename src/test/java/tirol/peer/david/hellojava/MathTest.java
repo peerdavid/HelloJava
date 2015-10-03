@@ -23,7 +23,7 @@ public class MathTest {
       int a = 3;
       int b = 4;
 
-      int expected = 7;
+      int expected = 9;
       int actual = _testee.add(a, b);
 
       Assert.assertEquals(expected, actual);
