@@ -22,5 +22,5 @@ This is a simple hello world (java) project with continuous integration workflow
   
 ## DockerImage <i>(Dockerfile)</i>
 1) Use java 8 base image<br />
-2) Copy java class files into the docker container
+2) Copy java class files into the docker container<br />
 3) Execute it
